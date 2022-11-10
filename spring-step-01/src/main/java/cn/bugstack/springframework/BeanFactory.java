@@ -14,6 +14,11 @@ public class BeanFactory {
 
     private Map<String, BeanDefinition> beanDefinitionMap = new ConcurrentHashMap<>();
 
+    /**
+     * 获取Bean
+     * @param name bean名称
+     * @return
+     */
     public Object getBean(String name) {
         return beanDefinitionMap.get(name).getBean();
     }
